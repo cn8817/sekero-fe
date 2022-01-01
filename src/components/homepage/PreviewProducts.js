@@ -54,7 +54,7 @@ export default function PreviewProducts(){
                     )
                 })}
             </div>
-            <button className='preview-btn'>VIEW ALL PRODUCTS</button>
+            <Link to='/shop'><button className='preview-btn'>VIEW ALL PRODUCTS</button></Link>
         </div>
     )
 }
