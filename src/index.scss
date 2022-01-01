@@ -30,3 +30,36 @@ body {
   }
 }
 
+.header-container{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  color: #000000;
+  margin-top: 15rem;
+
+  h1{
+    font-size: 3rem;
+  }
+
+  .header-words{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 40vh;
+  }
+
+  .header-btn{
+    background-color: #11C353;
+    color: #ffffff;
+    width: 30%;
+    padding: 0.7rem;
+    border-radius:20px;
+    margin-top: 1rem;
+  }
+
+  .header-btn:hover{
+    background-color: #0FAF4A;
+    color: #F2F3F5;
+  }
+}
+
