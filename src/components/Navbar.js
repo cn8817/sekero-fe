@@ -7,12 +7,12 @@ export default function Navbar(){
             <div>
                 <Link to='/'><img  className='max-h-16' src={Logo}/></Link>
             </div>
-                <ul className='flex'>
+                <ul className='flex text-text-light'>
                     <li className='px-5'><Link to='/'>HOME</Link></li>
                     <li className='px-5'><Link to='/story'>OUR STORY</Link></li>
                     <li className='px-5'><Link to='/shop'>SHOP</Link></li>
                     <li className='px-5'><Link to='/recipes'>RECIPES</Link></li>
-                    <li className='px-5'><Link to='/cart' className='flex'><ShoppingCartIcon className="h-5 w-5 text-gray-500"/>CART</Link></li>
+                    <li className='px-5 hover:text-highlight'><Link to='/cart' className='flex'><ShoppingCartIcon className="h-5 w-5 text-textlight"/>CART</Link></li>
                 </ul>
         </div>
     )
