@@ -1,6 +1,4 @@
-import React from 'react'
-
-export default function News(){
+export default function Hero(){
     return(
         <div>
             

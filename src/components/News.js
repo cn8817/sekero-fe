@@ -1,6 +1,4 @@
-import React from 'react'
-
-export default function Navbar(){
+export default function News(){
     return(
         <div>
             
