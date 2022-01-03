@@ -37,7 +37,7 @@ export default function PreviewProducts(){
 
     return(
         <div className='flex flex-col items-center mb-10'>
-            <p className='text-highlight pt-32 pb-3 uppercase small'>our online store</p>
+            <p className='text-highlight pt-24 pb-3 uppercase small'>our online store</p>
             <h2 className='pb-10'>Sekero Rice Cakes</h2>
             <div className='container flex flex-row justify-between mb-10'>
                 {dummyData.map(item => {
