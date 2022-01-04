@@ -6,7 +6,7 @@ import Footer from './components/Footer';
 
 function App() {
   return (
-    <div className="App m-0">
+    <div className="App">
       <Navbar/>
       {/* <Button>button</Button>
       <Button variant='secondary'>secondary</Button> */}
