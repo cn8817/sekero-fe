@@ -12,8 +12,8 @@ export default function Navbar(){
                     <li className='px-5'><Link to='/story'>our story</Link></li>
                     <li className='px-5'><Link to='/shop'>shop</Link></li>
                     <li className='px-5'><Link to='/recipes'>recipes</Link></li>
-                    <li className='px-5 hover:text-highlight'><Link to='/cart' className='flex'>
-                        <ShoppingCartIcon className="h-5 w-5 text-textlight"/>cart</Link>
+                    <li className='px-5 hover:text-highlight'>
+                        <Link to='/cart' className='flex'><ShoppingCartIcon className="h-5 w-5 text-textlight"/>cart</Link>
                     </li>
                 </ul>
         </div>
