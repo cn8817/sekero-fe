@@ -1,9 +1,9 @@
 import axios from 'axios'
 import { useQuery } from 'react-query'
 import { Link } from 'react-router-dom'
-import Button from '../Button'
-import Tteokbokki from '../../assets/recipe-photo.png'
-import Tteokguk from '../../assets/recipe-photo-2.png'
+import Button from './Button'
+// import Tteokbokki from '../../assets/recipe-photo.png'
+// import Tteokguk from '../../assets/recipe-photo-2.png'
 
 export default function PreviewRecipies(){
 
