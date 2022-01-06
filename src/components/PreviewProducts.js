@@ -1,11 +1,11 @@
 import { Link } from 'react-router-dom'
 import { useQuery } from 'react-query'
 import axios from 'axios'
-import Button from '../Button'
-import Star from '../../assets/star.png'
-import Green from '../../assets/sekero-rice-cakes-green.png'
-import Red from '../../assets/sekero-tteokbokki-red.png'
-import Blue from '../../assets/macaroni-sekero.png'
+import Button from './Button'
+// import Star from '../../assets/star.png'
+// import Green from '../../assets/sekero-rice-cakes-green.png'
+// import Red from '../../assets/sekero-tteokbokki-red.png'
+// import Blue from '../../assets/macaroni-sekero.png'
 
 export default function PreviewProducts(){
     // const dummyData = [

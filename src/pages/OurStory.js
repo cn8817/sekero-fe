@@ -1,17 +1,16 @@
-import React from 'react'
-import Hero from '../components/homepage/Hero'
+import Hero from '../components/ourStory/Hero'
 import PreviewProducts from '../components/PreviewProducts'
 import PreviewRecipies from '../components/PreviewRecipes'
-import Stores from '../components/homepage/Stores'
+import Ingredients from '../components/Ingredients'
 import News from '../components/News'
 
-export default function HomePage(){
+export default function OurStory() {
     return(
         <div>
             <Hero/>
             <PreviewProducts/>
             <PreviewRecipies/>
-            <Stores/>
+            <Ingredients/>
             <News/>
         </div>
     )
