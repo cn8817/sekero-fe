@@ -4,7 +4,7 @@ This is the front end repo for the Sekero e-commerece website (non official). Us
 
 The frontend is hosted on: 
 
-The backend is hosted on: 
+The backend is hosted on: https://43p44fmhh5.execute-api.us-west-1.amazonaws.com/dev/
 
 ## Launching the application locally
 - install the dependencies using *npm i* in the terminal
