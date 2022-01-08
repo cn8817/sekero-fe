@@ -1,10 +1,11 @@
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
-import { useProductData } from '../hooks/queries/useProductData'
+import { useProductData } from '../../hooks/queries/useProductData'
 import { useParams } from 'react-router-dom'
-import Button from './Button'
-import Badges from '../assets/description-badges.png'
-import Accordian from './Accordion'
+import Button from '../Button'
+import Badges from '../../assets/description-badges.png'
+import Accordian from '../Accordion'
+
 
 export default function Product(){
     const [quantity, setQuantity] = useState(1)
@@ -38,7 +39,7 @@ export default function Product(){
 
     return(
         <div className='container my-10'>
-            <ul className='flex flex-row small'>
+            <ul className='flex flex-row small mb-3'>
                 <li><Link to='/'>Home</Link></li>
                 <li>/</li>
                 <li><Link to='/products'>Products</Link></li>
@@ -47,8 +48,8 @@ export default function Product(){
             </ul>
             <div className='flex flex-row justify-between'>
                 <div className='flex flex-col'>
-                    <img src={data?.data.images[0]} className='max-w-lg max-h-80 object-contain'/>
-                    <div>
+                    <img src={data?.data.images[0]} className='max-w-3xl max-h-96 object-contain'/>
+                    <div className='my-3'>
                         <ul className='flex flex-row'>
                             {data?.data.images.map(image => {
                                 return(
@@ -58,7 +59,7 @@ export default function Product(){
                         </ul>
                     </div>
                 </div>
-                <div className='pr-60'>
+                <div>
                     <h3 className='mb-3'>{data?.data.title}</h3>
                     <p className='mb-3'>{data?.data.quantity}</p>
                     <p className='mb-3'>${data?.data.price}</p>

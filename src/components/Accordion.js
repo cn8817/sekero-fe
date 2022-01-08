@@ -7,9 +7,9 @@ export default function Accordian({title, content}){
         setIsActive(!isActive)
     }
     return (
-        <div className="flex flex-col max-w-[17rem]">
+        <div className="flex flex-col max-w-[18rem]">
             <div className='flex flex-row justify-between border-b-2 border-black py-3'>
-                <p>{title}</p>
+                <p className="pr-50">{title}</p>
                 <button onClick={handleActive}>{isActive ? '-' : '+'}</button>
             </div>
             <div>
