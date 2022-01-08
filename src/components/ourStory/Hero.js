@@ -7,7 +7,7 @@ export default function Hero(){
                 <h1>Sekero One.</h1>
                 <h1 className='pb-8'>One Family.</h1>
                 <div className='max-w-lg'>
-                    <p className='pb-8'>In korean, "Sekero" means "around the world." From manufacturing rice cakes in the heart of Los ANgeles to distributing products from a South Korean manufactuer in Seoul, Sekero One is run by first-gen Korean couple James and Sunhee Choi.</p>
+                    <p className='pb-8'>In korean, "Sekero" means "around the world." From manufacturing rice cakes in the heart of Los Angeles to distributing products from a South Korean manufactuer in Seoul, Sekero One is run by first-gen Korean couple James and Sunhee Choi.</p>
                     <p>Since 1994, Mr. and Mrs. Choi started a new life together in Souther California, sharing their love for Korean food. +25 years and many tests later, the couple discovered the most chewy, perfect rice cakes.</p>
                 </div>
             </div>
