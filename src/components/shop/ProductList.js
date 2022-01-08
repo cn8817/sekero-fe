@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import { useQuery } from 'react-query'
 import axios from 'axios'
 
@@ -14,6 +15,7 @@ export default function ProductList(){
             <div className='container flex flex-row justify-between mb-10'>
                 {queryInfo.data?.map(item => {
                     return(
+                        <Link to={`/products/${item.id}`}>
                             <div key={item.title}>
                                 <div className='bg-base2 px-14 py-10 rounded-lg'>
                                     <img className='max-h-80'src={item.images[0]}/>
@@ -32,6 +34,7 @@ export default function ProductList(){
                                 </div>
                             </div>
                         </div>
+                        </Link>
                     )
                 })}
             </div>

@@ -4,6 +4,7 @@ import { Route, Switch } from 'react-router-dom'
 import Homepage from './pages/Homepage'
 import OurStory from './pages/OurStory'
 import Shop from './pages/Shop'
+import Product from './components/Product'
 import Footer from './components/Footer';
 
 function App() {
@@ -15,7 +16,8 @@ function App() {
       <Switch>
         <Route exact path='/' component={Homepage}/>
         <Route exact path='/our-story' component={OurStory}/>
-        <Route exact path='/shop' component={Shop}/>
+        <Route exact path='/products' component={Shop}/>
+        <Route path='/products/:id' component={Product}/>
       </Switch>
       <Footer/>
     </div>

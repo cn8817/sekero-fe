@@ -8,35 +8,7 @@ import Button from './Button'
 // import Blue from '../../assets/macaroni-sekero.png'
 
 export default function PreviewProducts(){
-    // const dummyData = [
-    //     {
-    //         id: 1,
-    //         picture: Green,
-    //         stars: 5,
-    //         product: 'Tteokguk Rice Cakes',
-    //         alt: '(Rice Cake Soup)',
-    //         price: '$9.99',
-    //         weight: '24 oz pack (Pack of 1)'
-    //     },
-    //     {
-    //         id: 2,
-    //         picture: Red,
-    //         stars: 5,
-    //         product: 'Tteokbokki Rice Cakes',
-    //         alt: '(Spicy Stir-Fried Rice Cakes)',
-    //         price: '$9.99',
-    //         weight: '24 oz pack (Pack of 1)'
-    //     },
-    //     {
-    //         id: 3,
-    //         picture: Blue,
-    //         stars: 5,
-    //         product: 'Macaroni Rice Cakes',
-    //         price: '$9.99',
-    //         weight: '24 oz pack (Pack of 1)'
-    //     },
-    // ]
-    const queryInfo = useQuery('product', () =>
+    const queryInfo = useQuery('products', () =>
         axios
         .get('https://43p44fmhh5.execute-api.us-west-1.amazonaws.com/dev/products')
         .then(res => res.data)
@@ -49,7 +21,8 @@ export default function PreviewProducts(){
             <div className='container flex flex-row justify-between mb-10'>
                 {queryInfo.data?.map(item => {
                     return(
-                            <div key={item.title}>
+                        <Link to={`/products/${item.id}`}>
+                            <div key={item.id}>
                                 <div className='bg-base2 px-14 py-10 rounded-lg'>
                                     <img className='max-h-80'src={item.images[0]}/>
                                 </div>
@@ -67,6 +40,7 @@ export default function PreviewProducts(){
                                 </div>
                             </div>
                         </div>
+                    </Link>
                     )
                 })}
             </div>
