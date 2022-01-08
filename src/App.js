@@ -6,6 +6,7 @@ import OurStory from './pages/OurStory'
 import Shop from './pages/Shop'
 import ProductPage from './pages/ProductPage'
 import Footer from './components/Footer';
+import CheckoutForm from './pages/CheckOutPage'
 
 import {Elements} from '@stripe/react-stripe-js';
 import {loadStripe} from '@stripe/stripe-js';
