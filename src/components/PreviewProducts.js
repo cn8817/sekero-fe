@@ -44,7 +44,7 @@ export default function PreviewProducts(){
                     )
                 })}
             </div>
-            <Link to='/shop'><Button className='py-3 uppercase'>view all products</Button></Link>
+            <Link to='/products'><Button className='py-3 uppercase'>view all products</Button></Link>
         </div>
     )
 }

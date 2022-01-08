@@ -7,27 +7,6 @@ import Button from './Button'
 
 export default function PreviewRecipies(){
 
-// const dummyData = [
-//     {
-//         id: 1,
-//         title: 'Tteokbokki',
-//         alt: '(Spicy stir-fried Rice Caked)',
-//         description: 'This popular street-food dish is a garlicky, richly spiced dish with cylindrical rice cakes bathed in red chili paste.',
-//         picture: Tteokbokki,
-//         servings: '2',
-//         time: '20'
-//     },
-//     {
-//         id: 1,
-//         title: 'Tteokbokki',
-//         alt: '(Spicy stir-fried Rice Caked)',
-//         description: 'A traditional must-have holiday dish. Using rice cake coins, we share a recipe that warms the heart.',
-//         picture: Tteokguk,
-//         servings: '2',
-//         time: '20'
-//     },
-// ]
-
 const queryInfo = useQuery('recipes', () =>
 axios
 .get('https://43p44fmhh5.execute-api.us-west-1.amazonaws.com/dev/recipes')
