@@ -1,11 +1,13 @@
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import Button from './Button'
+import { useHistory } from 'react-router-dom'
 
 import { useMutation } from 'react-query'
 import axios from 'axios'
 
 export default function Register(){
+    const { push } = useHistory()
 
     const [user, setUser] = useState({
         firstname: '',
@@ -14,7 +16,11 @@ export default function Register(){
         password: ''
     })
 
-    const { mutate } = useMutation(createUser)
+    const { mutate, isError, error } = useMutation(createUser)
+
+    if(isError){
+        return(error.message)
+    }
 
     async function createUser() {
         const res = await axios.post('https://43p44fmhh5.execute-api.us-west-1.amazonaws.com/dev/register')
@@ -26,10 +32,12 @@ export default function Register(){
             ...user,
             [e.target.name]: e.target.value
         })
+        console.log(user)
     }
 
     const handleSubmit = () => {
-        mutate(user)
+        console.log(mutate(user))
+        push('/')
     }
     
     return(
