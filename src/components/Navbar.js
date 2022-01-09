@@ -15,8 +15,11 @@ export default function Navbar(){
                     <li className='px-5 hover:text-highlight'>
                         <Link to='/cart' className='flex'><ShoppingCartIcon className="h-5 w-5 text-textlight"/>cart</Link>
                     </li>
-                    <li>
-                        <Link to='/register'>Sign Up</Link>
+                    <li className='px-5'>
+                        <Link to='/register'>sign up</Link>
+                    </li>
+                    <li className='px-5'>
+                        <Link to='/login'>login</Link>
                     </li>
                 </ul>
         </div>

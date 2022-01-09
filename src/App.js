@@ -8,6 +8,7 @@ import ProductPage from './pages/ProductPage'
 import Footer from './components/Footer';
 import CheckoutForm from './pages/CheckOutPage'
 import Register from './components/Register'
+import Login from './components/Login'
 
 import {Elements} from '@stripe/react-stripe-js';
 import {loadStripe} from '@stripe/stripe-js';
@@ -28,6 +29,7 @@ function App() {
         <Route exact path='/products' component={Shop}/>
         <Route path='/products/:id' component={ProductPage}/>
         <Route exact path='/register' component={Register}/>
+        <Route exact path='/login' component={Login}/>
         <Elements stripe={stripePromise} options={options}>
           <CheckoutForm />
         </Elements>
