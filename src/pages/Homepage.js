@@ -1,4 +1,3 @@
-import React from 'react'
 import Hero from '../components/homepage/Hero'
 import PreviewProducts from '../components/PreviewProducts'
 import PreviewRecipies from '../components/PreviewRecipes'
