@@ -9,19 +9,8 @@ export default function Login(){
 
     const [user, setUser] = useState({
         email: '',
-        password: ''
+        pass: ''
     })
-
-    const { mutate, isError, error } = useMutation(loginUser)
-
-    if(isError){
-        return(error.message)
-    }
-
-    async function loginUser() {
-        const res = await axios.post('https://43p44fmhh5.execute-api.us-west-1.amazonaws.com/dev/login')
-        setUser(res.data)
-    }
 
     const handleChange = (e) => {
         setUser({
@@ -30,8 +19,14 @@ export default function Login(){
         })
     }
 
-    const handleSubmit = () => {
-        mutate(user)
+    const handleSubmit = (e) => {
+        e.preventDefault()
+        console.log(user)
+        axios
+            .post('https://43p44fmhh5.execute-api.us-west-1.amazonaws.com/dev/login', user)
+            .then(res => {
+                console.log(res)
+            })
     }
     
     return(
@@ -53,8 +48,8 @@ export default function Login(){
                     <div className='flex flex-col'>
                         <label>Password</label>
                         <input
-                            name='password'
-                            value={user.password}
+                            name='pass'
+                            value={user.pass}
                             onChange={handleChange}
                             type='password'
                             placeholder='Password'
@@ -62,7 +57,7 @@ export default function Login(){
                         />
                     </div>
                 </div>
-                <Button variant='secondary' onClick={handleSubmit}>Login</Button>
+                <button onClick={handleSubmit}>Login</button>
                 <p className='small mt-5'>Don't have an account? <Link to='/register'>Sign Up</Link></p>
             </form>
         </div>
