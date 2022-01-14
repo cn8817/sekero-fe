@@ -31,7 +31,7 @@ export default function Register(){
             .post('https://43p44fmhh5.execute-api.us-west-1.amazonaws.com/dev/register', user)
             .then(res => {
                 console.log(res.config.data)
-                // push('/login')
+                push('/login')
             })
             .catch(err => {
                 console.log(err)
