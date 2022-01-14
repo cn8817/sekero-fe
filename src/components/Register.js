@@ -13,19 +13,8 @@ export default function Register(){
         firstname: '',
         lastname: '',
         email: '',
-        password: ''
+        pass: ''
     })
-
-    const { mutate, isError, error } = useMutation(createUser)
-
-    if(isError){
-        return(error.message)
-    }
-
-    async function createUser() {
-        const res = await axios.post('https://43p44fmhh5.execute-api.us-west-1.amazonaws.com/dev/register')
-        setUser(res.data)
-    }
 
     const handleChange = (e) => {
         setUser({
@@ -35,9 +24,19 @@ export default function Register(){
         console.log(user)
     }
 
-    const handleSubmit = () => {
-        console.log(mutate(user))
-        push('/')
+    const handleSubmit = (e) => {
+        e.preventDefault()
+        console.log('hi')
+        axios
+            .post('https://43p44fmhh5.execute-api.us-west-1.amazonaws.com/dev/register', user)
+            .then(res => {
+                console.log(res.config.data)
+                push('/login')
+            })
+            .catch(err => {
+                console.log(err)
+            })
+
     }
     
     return(
@@ -83,8 +82,8 @@ export default function Register(){
                     <div className='flex flex-col'>
                         <label>Password</label>
                         <input
-                            name='password'
-                            value={user.password}
+                            name='pass'
+                            value={user.pass}
                             onChange={handleChange}
                             type='password'
                             placeholder='Password'
@@ -92,7 +91,7 @@ export default function Register(){
                         />
                     </div>
                 </div>
-                <Button variant='secondary' onClick={handleSubmit}>Sign Up</Button>
+                <button onClick={handleSubmit}>Sign Up</button>
                 <p className='small mt-5'>Already have an account? <Link to='/login'>Log in</Link></p>
             </form>
         </div>
