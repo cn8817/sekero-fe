@@ -6,7 +6,6 @@ import Button from '../Button'
 import Badges from '../../assets/description-badges.png'
 import Accordian from '../Accordion'
 
-
 export default function Product(){
     const [quantity, setQuantity] = useState(1)
     const { id } = useParams()
