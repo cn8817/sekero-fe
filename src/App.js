@@ -13,6 +13,7 @@ import RecipesPage from './pages/RecipesPage'
 
 import {Elements} from '@stripe/react-stripe-js';
 import {loadStripe} from '@stripe/stripe-js';
+//figure out how to use stripe after implementing my own aws backend apis
 
 function App() {
 
