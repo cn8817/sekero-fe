@@ -5,6 +5,7 @@ import Button from './Button'
 // import Tteokbokki from '../../assets/recipe-photo.png'
 // import Tteokguk from '../../assets/recipe-photo-2.png'
 
+//make recipes endpoint in aws
 export default function PreviewRecipies(){
 
 const queryInfo = useQuery('recipes', () =>
