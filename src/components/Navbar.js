@@ -2,6 +2,7 @@ import { ShoppingCartIcon } from '@heroicons/react/outline'
 import { Link } from 'react-router-dom'
 import Logo from '../assets/sekuro-logo-tablet.png'
 
+//add a function that removes the login/register items and replaces with account/settings
 export default function Navbar(){
     return(
             <div className='container flex justify-between items-center'>
